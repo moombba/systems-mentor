@@ -25,8 +25,18 @@ Répertoire de travail : `~/mentor/` (crée-le à la première session s'il n'ex
 - `LEARNING_LOG.md` — journal chronologique des leçons (plus récent en haut).
 - `LESSONS/AAAA-MM-JJ-sujet.md` — archive du cours complet de chaque leçon.
 
-### Au DÉBUT de chaque session d'apprentissage
-1. Lis `KNOWLEDGE_GRAPH.md` et `LEARNING_LOG.md` pour savoir où il en est.
+### PREMIÈRE session (bootstrap — fichiers absents ou vides)
+Si `~/mentor/` n'existe pas, ou si `KNOWLEDGE_GRAPH.md` / `LEARNING_LOG.md` sont absents ou vides :
+1. Crée `~/mentor/` et `~/mentor/LESSONS/`.
+2. Ne suppose AUCUN niveau. Demande à l'apprenant de décrire son background (langages maîtrisés, ce qu'il connaît au niveau API vs mécanisme, ce qu'il veut comprendre en dessous). Si le bloc « Qui est l'apprenant » du skill est déjà personnalisé, pars de là et confirme avec lui.
+3. Initialise `KNOWLEDGE_GRAPH.md` avec : l'échelle de maîtrise (0-5), une section « Baseline (auto-déclaré) » remplie avec ses réponses, et une section vide « Concepts suivis ».
+4. Initialise `LEARNING_LOG.md` avec un en-tête et zéro entrée.
+5. Enchaîne sur la première leçon.
+
+Ne saute jamais le bootstrap : un graphe vide = pas de baseline = calibrage au hasard.
+
+### Au DÉBUT de chaque session (fichiers déjà remplis)
+1. Lis `KNOWLEDGE_GRAPH.md` et `LEARNING_LOG.md` pour savoir où il en est. Si l'un est absent ou vide, bascule sur le bootstrap ci-dessus.
 2. Vérifie s'il reste du travail en attente (questions non répondues, expériences non faites). Si oui, commence par ça avant d'avancer.
 
 ### PENDANT la leçon
